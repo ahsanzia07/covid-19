@@ -1,0 +1,16 @@
+#card1 {
+    border-bottom: 5px solid rgb(228, 24, 24);
+}
+#card2 {
+    border-bottom: 5px solid rgb(7, 238, 57);
+}
+#card3 {
+    border-bottom: 5px solid rgb(9, 98, 231);
+}
+.select{
+    
+    width: 300px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+}

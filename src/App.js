@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React ,{useReducer}from "react";
+import { createContext } from "react";
+import { useContext } from "react";
+import NavBar from "./components/navbar"
+import FullWidthGrid from "./components/grid"
+import Selectbox from "./components/selectbox"
+import {DataProvider} from "./store/transcontext"
 import './App.css';
+import PracticeReducer  from "./components/practiceReducer"
+import Polar from "./components/chart"
 
+export const conWala= createContext()
 function App() {
   return (
+      <conWala.Provider value={"ahsan"}>
+    <DataProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+     <NavBar/>
+     <FullWidthGrid/>
+ <Selectbox ></Selectbox>
+
+   {/* <PracticeReducer></PracticeReducer> */}
+ <Polar> </Polar>
     </div>
-  );
+    </DataProvider>
+    </conWala.Provider >
+     );
 }
 
 export default App;
